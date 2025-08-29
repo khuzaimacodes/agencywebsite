@@ -79,28 +79,6 @@ export default function Team() {
                         height={241}
                         alt="team-img"
                       />
-                      <div className="social-profile">
-                        <span className="plus-btn">
-                          <i className="fas fa-share-alt" />
-                        </span>
-                        <ul>
-                          <li>
-                            <a href="https://www.facebook.com/">
-                              <i className="fab fa-facebook-f" />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.twitter.com/">
-                              <i className="fab fa-twitter" />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.linkedin.com/">
-                              <i className="fa-brands fa-linkedin-in" />
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                     <div className="team-content text-center">
                       <h3>

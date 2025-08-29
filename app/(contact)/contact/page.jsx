@@ -2,13 +2,12 @@ import Footer1 from "@/components/footers/Footer1";
 import Header2 from "@/components/headers/Header2";
 import HeaderTop2 from "@/components/headers/HeaderTop2";
 
-import Cta from "@/components/common/Cta";
 import Contact from "@/components/otherPages/contact/Contact";
 import Map from "@/components/otherPages/contact/Map";
 import Link from "next/link";
 export const metadata = {
-  title: "Contact || Techbe-IT Solution & Technology Service Nextjs Template",
-  description: "Techbe-IT Solution & Technology Service Nextjs Template",
+  title: "Contact Us - KZWebSolutions | Custom Software Development & Web Applications",
+  description: "Get in touch with KZWebSolutions for professional software development services. Contact us for web design, development, AI solutions, and more. We're here to help bring your digital vision to life.",
 };
 export default function Page() {
   return (
@@ -23,12 +22,12 @@ export default function Page() {
             style={{ backgroundImage: "url(/assets/img/hero/breadcumbBg.png)" }}
           >
             <div className="container">
-              <div className="page-heading">
-                <h1 className="wow fadeInUp" data-wow-delay=".3s">
+              <div className="page-heading py-40">
+                <h1 className="wow fadeInUp mb-15" data-wow-delay=".3s">
                   Contact
                 </h1>
                 <ul
-                  className="breadcrumb-items wow fadeInUp"
+                  className="breadcrumb-items wow fadeInUp mb-0"
                   data-wow-delay=".5s"
                 >
                   <li>
@@ -48,7 +47,6 @@ export default function Page() {
         </div>
         <Contact />
         <Map />
-        <Cta />
       </main>
       <Footer1 />
     </>

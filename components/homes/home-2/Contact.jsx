@@ -1,7 +1,56 @@
 "use client";
 import Image from "next/image";
+import React, { useRef } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
+  const formRef = useRef();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = formRef.current;
+    const fd = new FormData(form);
+    const payload = {
+      name: fd.get("name"),
+      email: fd.get("email"),
+      message: fd.get("message"),
+             serviceType: fd.get("serviceType") || undefined,
+       budget: fd.get("budget") || undefined,
+      source: "home",
+    };
+
+    // Show immediate loading feedback
+    const loadingToast = toast.loading("Sending your message...", {
+      position: "bottom-right",
+    });
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      
+      // Dismiss loading toast
+      toast.dismiss(loadingToast);
+      
+      if (res.ok) {
+        toast.success("Message sent successfully! We'll get back to you soon.", { 
+          position: "bottom-right",
+          autoClose: 5000,
+        });
+        form.reset();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        toast.error(data.error || "Failed to send message", { position: "bottom-right" });
+      }
+    } catch (err) {
+      // Dismiss loading toast
+      toast.dismiss(loadingToast);
+      toast.error("Network error", { position: "bottom-right" });
+    }
+  };
   return (
     <section className="contact-area">
       <div
@@ -26,7 +75,7 @@ export default function Contact() {
         >
           <Image
             alt="shape"
-            src="/assets/img/shape/contactShape1_2.png"
+            src="/assets/img/shape/contactShape1_2.webp"
             width="325"
             height="554"
           />
@@ -36,9 +85,10 @@ export default function Contact() {
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
               <div className="contact-form style1 space-top position-relative">
                 <form
+                  ref={formRef}
                   className="wow fadeInUp"
                   data-wow-delay=".6s"
-                  onSubmit={(e) => e.preventDefault()}
+                  onSubmit={handleSubmit}
                 >
                   <div className="row">
                     <div
@@ -53,7 +103,7 @@ export default function Contact() {
                       <div className="form-clt">
                         <div className="contact__from-input mb-20">
                           <label>Full name*</label>
-                          <input type="text" placeholder="Robot fox" />
+                          <input type="text" name="name" placeholder="Your name" required />
                         </div>
                       </div>
                     </div>
@@ -61,7 +111,7 @@ export default function Contact() {
                       <div className="form-clt">
                         <label>Email Address*</label>
                         <div className="contact__from-input mb-20">
-                          <input type="text" placeholder="info@example.com" />
+                          <input type="email" name="email" placeholder="info@example.com" required />
                         </div>
                       </div>
                     </div>
@@ -69,7 +119,7 @@ export default function Contact() {
                       <div className="form-clt">
                         <label>Type Of Service*</label>
                         <div className="contact__select mb-20">
-                          <select>
+                          <select name="serviceType">
                             <option value={0}>Select</option>
                             <option value={2}>Web Design</option>
                             <option value={3}>Web Development</option>
@@ -80,9 +130,17 @@ export default function Contact() {
                     </div>
                     <div className="col-lg-6">
                       <div className="form-clt">
-                        <label>Select Date*</label>
-                        <div className="contact__from-input mb-20">
-                          <input type="date" />
+                        <label>Your Budget*</label>
+                        <div className="contact__select mb-20">
+                          <select name="budget" required>
+                            <option value="">Select Budget</option>
+                            <option value="1000">$1,000 - $3,000</option>
+                            <option value="3000">$3,000 - $5,000</option>
+                            <option value="5000">$5,000 - $10,000</option>
+                            <option value="10000">$10,000 - $25,000</option>
+                            <option value="25000">$25,000+</option>
+                            <option value="unknown">Don't Know Yet</option>
+                          </select>
                         </div>
                       </div>
                     </div>
@@ -97,6 +155,7 @@ export default function Contact() {
                           name="message"
                           id="message"
                           placeholder="Write Message"
+                          required
                           defaultValue={""}
                         />
                       </div>
@@ -112,7 +171,14 @@ export default function Contact() {
             </div>
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
               <div className="contact-map wow fadeInUp" data-wow-delay=".9s">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4216.433331900906!2d90.36996032419312!3d23.83718617432321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1693682874850!5m2!1sen!2sbd" />
+                <iframe 
+                  src="https://maps.google.com/maps?q=124+City+Road,+London,+United+Kingdom,+EC1V+2NX&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  style={{ border: 0, height: '400px', width: '100%' }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="124 City Road, London, United Kingdom, EC1V 2NX"
+                />
               </div>
             </div>
           </div>

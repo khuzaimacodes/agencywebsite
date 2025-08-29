@@ -45,18 +45,21 @@ export default function Cta() {
             </div>
             <div className="fancy-box_content">
               <h4 className="text-white wow fadeInUp" data-wow-delay=".3s">
-                Call Us Now
+                Get Expert Support
               </h4>
               <span className="text-white wow fadeInUp" data-wow-delay=".6s">
-                +208-555-0112
+                +44 7575 842908
               </span>
+              <p className="text-white-50 mb-0 mt-2 wow fadeInUp" data-wow-delay=".8s">
+                24/7 Technical Assistance
+              </p>
             </div>
           </div>
           <h3
             className="cta-title text-white wow fadeInUp"
-            data-wow-delay=".9s"
+            data-wow-delay=".3s"
           >
-            Stay Connected With Cutting Edge IT
+            Stay Connected With Modern Software Solutions
           </h3>
           <div className="btn-wrapper wow fadeInUp" data-wow-delay="1s">
             <Link

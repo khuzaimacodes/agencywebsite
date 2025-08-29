@@ -11,8 +11,8 @@ import AboutCta from "@/components/otherPages/AboutCta";
 import Testimonials from "@/components/homes/home-2/Testimonials";
 import Link from "next/link";
 export const metadata = {
-  title: "About || Techbe-IT ",
-  description: "Techbe-IT Solution ",
+  title: "About Us - KZWebSolutions | Custom Software Development & Web Applications",
+  description: "KZWebSolutions - Professional software development company specializing in React, Next.js, and modern web technologies. We create innovative digital solutions for businesses worldwide.",
 };
 export default function Page() {
   return (

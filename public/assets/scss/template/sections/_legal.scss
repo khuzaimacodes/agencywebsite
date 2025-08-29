@@ -1,0 +1,352 @@
+/*=================================
+    Legal Pages Styles
+==================================*/
+
+/* Breadcrumb Section */
+.breadcrumb-section {
+  background: linear-gradient(90deg, #4a6cf7 0%, #8b5cf6 100%);
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.2;
+  }
+}
+
+.breadcrumb-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.breadcrumb-title {
+  color: $white-color;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  line-height: 1.2;
+}
+
+.breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.breadcrumb-item {
+  color: rgba(255,255,255,0.9);
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 5px;
+
+  a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+
+    &:hover {
+      color: $white-color;
+      text-decoration: underline;
+    }
+  }
+
+  &.active {
+    color: $white-color;
+    font-weight: 600;
+  }
+
+  & + .breadcrumb-item::before {
+    content: ">";
+    color: rgba(255,255,255,0.7);
+    margin: 0 10px;
+    font-weight: 600;
+  }
+}
+
+/* Legal Content Section */
+.terms-section,
+.privacy-section {
+  padding: 80px 0;
+  background: $white-color;
+  position: relative;
+}
+
+.terms-content,
+.privacy-content {
+  background: $white-color;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  padding: 60px;
+  position: relative;
+  border: 1px solid rgba(74, 108, 247, 0.1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4a6cf7 0%, #8b5cf6 100%);
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+.content-block {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    color: $title-color;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid $smoke-color;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, #4a6cf7 0%, #8b5cf6 100%);
+    }
+  }
+
+  h3 {
+    color: $title-color;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 25px 0 15px 0;
+  }
+
+  p {
+    color: $body-color;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    margin: 20px 0;
+    padding-left: 20px;
+  }
+
+  li {
+    color: $body-color;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    position: relative;
+
+    &::before {
+      content: '•';
+      color: #4a6cf7;
+      font-weight: bold;
+      position: absolute;
+      left: -20px;
+    }
+  }
+
+  strong {
+    color: $title-color;
+    font-weight: 600;
+  }
+}
+
+.contact-info {
+  background: rgba(74, 108, 247, 0.05);
+  padding: 25px;
+  border-radius: 15px;
+  border-left: 4px solid #4a6cf7;
+  margin-top: 20px;
+
+  p {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.last-updated {
+  background: rgba(139, 92, 246, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 40px;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .breadcrumb-title {
+    font-size: 36px;
+  }
+  
+  .terms-content,
+  .privacy-content {
+    padding: 40px 30px;
+  }
+  
+  .content-block h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .breadcrumb-section {
+    padding: 80px 0 60px;
+  }
+  
+  .breadcrumb-title {
+    font-size: 32px;
+  }
+  
+  .breadcrumb {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    display: none;
+  }
+  
+  .terms-content,
+  .privacy-content {
+    padding: 30px 20px;
+  }
+  
+  .content-block h2 {
+    font-size: 20px;
+  }
+  
+  .content-block h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 479px) {
+  .breadcrumb-title {
+    font-size: 28px;
+  }
+  
+  .terms-content,
+  .privacy-content {
+    padding: 25px 15px;
+  }
+  
+  .content-block {
+    margin-bottom: 30px;
+  }
+}
+
+/*=================================
+    Contact Page Form Improvements
+==================================*/
+
+.contact-section {
+  .contact-content {
+    .title-area {
+      margin-bottom: 40px;
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 0;
+        line-height: 1.8;
+      }
+    }
+
+    .contact-form-items {
+      margin-top: 20px;
+    }
+  }
+
+  .form-clt {
+    margin-bottom: 25px;
+  }
+
+  .form-label {
+    display: block;
+    font-weight: 600;
+    color: $title-color;
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e8e8e8;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+
+    &:focus {
+      outline: none;
+      border-color: $theme-color;
+      box-shadow: 0 0 0 3px rgba(56, 75, 255, 0.1);
+    }
+  }
+
+  .form-textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .gt-btn {
+    margin-top: 10px;
+    padding: 15px 30px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .contact-section {
+    .contact-content .title-area {
+      margin-bottom: 30px;
+    }
+    
+    .form-clt {
+      margin-bottom: 20px;
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+      padding: 12px 16px;
+      font-size: 15px;
+    }
+  }
+}
+

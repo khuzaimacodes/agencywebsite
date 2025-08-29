@@ -80,16 +80,15 @@ export default function SiteMenu() {
             <div className="about-logo">
               <Link href="/">
                 <Image
-                  alt="techo"
-                  src="/assets/img/logo-dark.png"
+                  alt="KZ WEBSOLUTIONS"
+                  src="/assets/img/blacklogo.png"
                   width="199"
                   height="42"
                 />
               </Link>
             </div>
             <p className="text">
-              Rapidiously myocardinate cross-platform intellectual capital
-              model. Appropriately create interactive infrastructures
+              Professional software development company specializing in React, Next.js, and modern web technologies. We create innovative digital solutions for businesses worldwide.
             </p>
           </div>
         </div>
@@ -106,8 +105,7 @@ export default function SiteMenu() {
                 />
               </div>
               <div className="details">
-                <p>789 Inner Lane, Holy park,</p>
-                <p>California, USA</p>
+                <p>124 City Road, London, United Kingdom, EC1V 2NX</p>
               </div>
             </div>
             <div className="info-box_text">
@@ -121,13 +119,8 @@ export default function SiteMenu() {
               </div>
               <div className="details">
                 <p>
-                  <a href="tel:+0123456789" className="info-box_link">
-                    +01 234 567 890
-                  </a>
-                </p>
-                <p>
-                  <a href="tel:+09876543210" className="info-box_link">
-                    +09 876 543 210
+                  <a href="tel:+447575842908" className="info-box_link">
+                    +44 7575 842908
                   </a>
                 </p>
               </div>
@@ -144,18 +137,10 @@ export default function SiteMenu() {
               <div className="details">
                 <p>
                   <a
-                    href="mailto:mailinfo00@techo.com"
+                    href="mailto:khuzaima@kzwebsoulutions.com"
                     className="info-box_link"
                   >
-                    mailinfo00@techo.com
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="mailto:support24@techo.com"
-                    className="info-box_link"
-                  >
-                    support24@techo.com
+                    khuzaima@kzwebsoulutions.com
                   </a>
                 </p>
               </div>

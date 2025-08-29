@@ -15,11 +15,12 @@ import Testimonials from "@/components/homes/home-2/Testimonials";
 import TextSlider from "@/components/homes/home-2/TextSlider";
 import Pricing from "@/components/common/Pricing";
 import Faq from "@/components/otherPages/faq/Faq";
+import ProjectSlider from "@/components/common/projectslider";
 // import VideoBox from "@/components/homes/home-2/VideoBox";
 import React from "react";
 export const metadata = {
-  title: "Home 2 || Techbe-IT Solution",
-  description: "Techbe-IT Solution & Technology Service Nextjs Template",
+  title: "Home - KZWebSolutions | Custom Software Development & Web Applications",
+  description: "KZWebSolutions - Professional software development company specializing in React, Next.js, and modern web technologies. We create scalable, SEO-optimized applications for businesses worldwide.",
 };
 export default function page() {
   return (
@@ -30,19 +31,20 @@ export default function page() {
         <Hero />
         <Facts />
         <Services />
-        <Pricing />
         <About />
         <Cta2 />
         <Projects />
+        {/* <ProjectSlider /> */}
         <TextSlider />
         {/* <VideoBox /> */}
         <Team />
         <Skills />
+        {/* <Pricing /> */}
         <Testimonials />
         <Faq />
         <Contact />
         <Cta />
-      </main>
+      </main>     
       <Footer1 />
     </>
   );

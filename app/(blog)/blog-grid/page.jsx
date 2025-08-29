@@ -6,8 +6,8 @@ import Cta from "@/components/common/Cta";
 import Blogs1 from "@/components/otherPages/blog/Blogs1";
 import Link from "next/link";
 export const metadata = {
-  title: "Blog Grid || Techbe-IT Solution & Technology Service Nextjs Template",
-  description: "Techbe-IT Solution & Technology Service Nextjs Template",
+  title: "Blog Grid || KZWebSolutions",
+  description: "KZWebSolutions - Professional Web Development & IT Solutions",
 };
 export default function Page() {
   return (

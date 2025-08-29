@@ -9,8 +9,8 @@ import VideoBox from "@/components/homes/home-2/VideoBox";
 import Team from "@/components/homes/home-2/Team";
 import Link from "next/link";
 export const metadata = {
-  title: "Service 1 || Techbe-IT Solution & Technology Service Nextjs Template",
-  description: "Techbe-IT Solution & Technology Service Nextjs Template",
+  title: "Services - KZWebSolutions | Custom Software Development & Web Applications",
+  description: "KZWebSolutions - Professional software development services including React, Next.js, web applications, and custom software solutions. We create scalable, SEO-optimized applications for businesses worldwide.",
 };
 export default function Page() {
   return (
@@ -27,7 +27,7 @@ export default function Page() {
             <div className="container">
               <div className="page-heading">
                 <h1 className="wow fadeInUp" data-wow-delay=".3s">
-                  Services 01
+                  Services
                 </h1>
                 <ul
                   className="breadcrumb-items wow fadeInUp"
@@ -42,15 +42,15 @@ export default function Page() {
                   <li>
                     <i className="fas fa-chevrons-right" />
                   </li>
-                  <li>Services 01</li>
+                  <li>Services</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <Services />
+        <Services/>
         <TextSlider />
-        <VideoBox />
+        {/* <VideoBox /> */}
         <Team />
         <div className="pb-300"></div>
 

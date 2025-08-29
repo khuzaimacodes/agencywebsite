@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useState } from "react";
 // import ModalVideo from "react-modal-video";
-import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import React, { useRef } from "react";
@@ -11,40 +10,74 @@ export default function Contact() {
   const [isOpen, setOpen] = useState(false);
   const form = useRef();
 
-  const sandMail = (e) => {
+  const sandMail = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm("service_noj8796", "template_fs3xchn", form.current, {
-        publicKey: "iG4SCmR-YtJagQ4gV",
-      })
-      .then((res) => {
-        if (res.status == 200) {
-          toast.success("Message Sent successfully!", {
-            position: "bottom-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-          form.current.reset();
-        } else {
-          toast.error("Ops Message not Sent!", {
-            position: "bottom-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-        }
+    const formEl = form.current;
+    const formData = new FormData(formEl);
+    const payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+      serviceType: formData.get("serviceType") || undefined,
+      budget: formData.get("budget") || undefined,
+      source: "contact-page",
+    };
+
+    // Show immediate loading feedback
+    const loadingToast = toast.loading("Sending your message...", {
+      position: "bottom-right",
+    });
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
+      
+      // Dismiss loading toast
+      toast.dismiss(loadingToast);
+      
+      if (res.ok) {
+        toast.success("Message sent successfully! We'll get back to you soon.", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        formEl.reset();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        toast.error(data.error || "Oops, message not sent!", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+    } catch (err) {
+      // Dismiss loading toast
+      toast.dismiss(loadingToast);
+      toast.error("Network error. Please try again.", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
   };
   return (
     <>
-      <section className="contact-section fix space">
+      <section className="contact-section fix py-80">
         <div className="container">
           <div className="contact-wrapper-2">
             <div className="row g-4 align-items-center">
@@ -76,7 +109,7 @@ export default function Contact() {
                       <div className="content">
                         <p>Call Us 7/24</p>
                         <h3>
-                          <a href="tel:+2085550112">+208-555-0112</a>
+                          <a href="tel:+447575842908">+44 7575 842908</a>
                         </h3>
                       </div>
                     </div>
@@ -106,8 +139,8 @@ export default function Contact() {
                       <div className="content">
                         <p>Make a Quote</p>
                         <h3>
-                          <a href="mailto:infotech@gmail.com">
-                            Infotech@gmail.com
+                          <a href="mailto:khuzaima@kzwebsoulutions.com">
+                            khuzaima@kzwebsoulutions.com
                           </a>
                         </h3>
                       </div>
@@ -136,8 +169,8 @@ export default function Contact() {
                         </svg>
                       </div>
                       <div className="content">
-                        <p>Location</p>
-                        <h3>4517 Washington ave.</h3>
+                        <p>Visit Our Office</p>
+                        <h3>124 City Road, London, United Kingdom, EC1V 2NX</h3>
                       </div>
                     </div>
                   </div>
@@ -162,95 +195,134 @@ export default function Contact() {
                   className="contact-content wow fadeInRight"
                   data-wow-delay=".7s"
                 >
-                  <div className="title-area">
-                    <h5 className="subtitle text-start">
-                      <span>
-                        <Image
-                          alt="icon"
-                          src="/assets/img/icon/titleIcon.png"
-                          width="28"
-                          height="12"
-                        />
-                      </span>{' '}
-                      Contact us{' '}
-                      <span>
-                        <Image
-                          alt="icon"
-                          src="/assets/img/icon/titleIcon.png"
-                          width="28"
-                          height="12"
-                        />
-                      </span>
-                    </h5>
-                    <h2 className="title mb-50">Ready to Get Started?</h2>
-                    <p>
-                      Nullam varius, erat quis iaculis dictum, eros urna varius
-                      eros, ut blandit felis odio in turpis. Quisque rhoncus,
-                      eros in auctor ultrices,
-                    </p>
-                  </div>
-                  <form
-                    ref={form}
-                    onSubmit={sandMail}
-                    className="contact-form-items"
-                  >
-                    <div className="row g-4">
-                      <div
-                        className="col-lg-6 wow fadeInUp"
-                        data-wow-delay=".3s"
-                      >
-                        <div className="form-clt">
-                          <span>Your name*</span>
-                          <input
-                            type="text"
-                            name="name"
-                            id="name"
-                            required
-                            placeholder="Your Name"
-                          />
+                                     <div className="title-area mb-30">
+                     <h5 className="subtitle text-start">
+                       <span>
+                         <Image
+                           alt="icon"
+                           src="/assets/img/icon/titleIcon.png"
+                           width="28"
+                           height="12"
+                         />
+                       </span>{' '}
+                       Contact us{' '}
+                       <span>
+                         <Image
+                           alt="icon"
+                           src="/assets/img/icon/titleIcon.png"
+                           width="28"
+                           height="12"
+                         />
+                       </span>
+                     </h5>
+                     <h2 className="title mb-20">Ready to Get Started?</h2>
+                     <p className="mb-0">
+                       Nullam varius, erat quis iaculis dictum, eros urna varius
+                       eros, ut blandit felis odio in turpis. Quisque rhoncus,
+                       eros in auctor ultrices,
+                     </p>
+                   </div>
+                                     <form
+                     ref={form}
+                     onSubmit={sandMail}
+                     className="contact-form-items"
+                   >
+                     <div className="row g-4">
+                       <div
+                         className="col-lg-6 wow fadeInUp"
+                         data-wow-delay=".3s"
+                       >
+                         <div className="form-clt">
+                           <div className="form-label">Your name*</div>
+                           <input
+                             type="text"
+                             name="name"
+                             id="name"
+                             required
+                             placeholder="Your Name"
+                             className="form-input"
+                           />
+                         </div>
+                       </div>
+                       <div
+                         className="col-lg-6 wow fadeInUp"
+                         data-wow-delay=".5s"
+                       >
+                         <div className="form-clt">
+                           <div className="form-label">Your Email*</div>
+                           <input
+                             type="email"
+                             name="email"
+                             id="email"
+                             required
+                             placeholder="Your Email"
+                             className="form-input"
+                           />
+                         </div>
+                       </div>
+                       <div
+                         className="col-lg-6 wow fadeInUp"
+                         data-wow-delay=".6s"
+                       >
+                                                 <div className="form-clt">
+                          <label>Type Of Service*</label>
+                          <div className="contact__select mb-20">
+                            <select name="serviceType" required>
+                              <option value="">Select Service</option>
+                              <option value="2">Web Design</option>
+                              <option value="3">Web Development</option>
+                              <option value="1">Cyber Security</option>
+                            </select>
+                          </div>
                         </div>
-                      </div>
-                      <div
-                        className="col-lg-6 wow fadeInUp"
-                        data-wow-delay=".5s"
-                      >
-                        <div className="form-clt">
-                          <span>Your Email*</span>
-                          <input
-                            type="text"
-                            name="email2"
-                            id="email2"
-                            required
-                            placeholder="Your Email"
-                          />
+                       </div>
+                       <div
+                         className="col-lg-6 wow fadeInUp"
+                         data-wow-delay=".7s"
+                       >
+                                                 <div className="form-clt">
+                          <label>Your Budget*</label>
+                          <div className="contact__select mb-20">
+                            <select name="budget" required>
+                              <option value="">Select Budget</option>
+                              <option value="1000">$1,000 - $3,000</option>
+                              <option value="3000">$3,000 - $5,000</option>
+                              <option value="5000">$5,000 - $10,000</option>
+                              <option value="10000">$10,000 - $25,000</option>
+                              <option value="25000">$25,000+</option>
+                              <option value="unknown">Don't Know Yet</option>
+                            </select>
+                          </div>
                         </div>
-                      </div>
-                      <div
-                        className="col-lg-12 wow fadeInUp"
-                        data-wow-delay=".7s"
-                      >
-                        <div className="form-clt">
-                          <span>Write Message*</span>
-                          <textarea
-                            name="message"
-                            id="message"
-                            required
-                            placeholder="Write Message"
-                            defaultValue={""}
-                          />
-                        </div>
-                      </div>
-                      <div
-                        className="col-lg-7 wow fadeInUp"
-                        data-wow-delay=".9s"
-                      >
-                        <button type="submit" className="gt-btn">
-                          Send Message
-                          <i className="fa-solid fa-arrow-right-long ms-1" />
-                        </button>
-                      </div>
-                    </div>
-                  </form>
+                       </div>
+                       <div
+                         className="col-lg-12 wow fadeInUp"
+                         data-wow-delay=".8s"
+                       >
+                         <div className="form-clt">
+                           <div className="form-label">Write Message*</div>
+                           <textarea
+                             name="message"
+                             id="message"
+                             required
+                             placeholder="Write Message"
+                             defaultValue={""}
+                             className="form-textarea"
+                             rows="4"
+                           />
+                         </div>
+                       </div>
+                       <div
+                         className="col-lg-7 wow fadeInUp"
+                         data-wow-delay=".9s"
+                       >
+                         <button type="submit" className="gt-btn">
+                           Send Message
+                           <i className="fa-solid fa-arrow-right-long ms-1" />
+                         </button>
+                       </div>
+                     </div>
+                   </form>
                 </div>
               </div>
             </div>

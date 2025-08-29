@@ -66,7 +66,7 @@ export default function About() {
                         height="12"
                       />
                     </span>{' '}
-                    About us Techbe{' '}
+                    About us KZWebSolutions{' '}
                     <span>
                       <Image
                         alt="icon"
@@ -77,13 +77,39 @@ export default function About() {
                     </span>
                   </h5>
                   <h2 className="title text-start">
-                    We Can Clients with the About Solution
+                    We Deliver Custom Software Solutions That Drive Business Growth
                   </h2>
                   <p className="text">
-                    It is a long established fact that a reader will be
-                    distracted the readable content of a page when looking at
-                    layout the point.
+                    We are a team of passionate software engineers, designers, and technology experts dedicated to building innovative digital solutions. With expertise in React, Next.js, and modern web technologies, we create scalable applications that help businesses thrive in the digital age.
                   </p>
+                  
+                  {/* Additional Stats */}
+                  <div className="additional-stats mt-4 mb-4">
+                    <div className="row g-3">
+                      <div className="col-6">
+                        <div className="stat-item d-flex align-items-center">
+                          <div className="stat-icon me-2">
+                            <i className="fa-solid fa-rocket" style={{ color: "#384bff", fontSize: "20px" }}></i>
+                          </div>
+                          <div className="stat-content">
+                            <div className="stat-number" style={{ fontWeight: "700", fontSize: "18px", color: "#384bff" }}>99.9%</div>
+                            <div className="stat-label" style={{ fontSize: "14px", color: "#726b7d" }}>Uptime</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-6">
+                        <div className="stat-item d-flex align-items-center">
+                          <div className="stat-icon me-2">
+                            <i className="fa-solid fa-clock" style={{ color: "#b42af3", fontSize: "20px" }}></i>
+                          </div>
+                          <div className="stat-content">
+                            <div className="stat-number" style={{ fontWeight: "700", fontSize: "18px", color: "#b42af3" }}>24/7</div>
+                            <div className="stat-label" style={{ fontSize: "14px", color: "#726b7d" }}>Support</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div className="fancy-box-wrapper">
                   <div className="fancy-box">
@@ -97,29 +123,29 @@ export default function About() {
                             height="16"
                           />
                         </li>
-                        <li>Branding And Design Identity</li>
-                      </ul>
-                      <ul className="ps-0">
-                        <li>
-                          <Image
-                            alt="icon"
-                            src="/assets/img/icon/signIcon.png"
-                            width="16"
-                            height="16"
-                          />
-                        </li>
-                        <li>Web site Marketing Solutions</li>
-                      </ul>
-                      <ul className="ps-0">
-                        <li>
-                          <Image
-                            alt="icon"
-                            src="/assets/img/icon/signIcon.png"
-                            width="16"
-                            height="16"
-                          />
-                        </li>
-                        <li>unlimited Download Data</li>
+                                                 <li>Full-Stack Development Solutions</li>
+                       </ul>
+                       <ul className="ps-0">
+                         <li>
+                           <Image
+                             alt="icon"
+                             src="/assets/img/icon/signIcon.png"
+                             width="16"
+                             height="16"
+                           />
+                         </li>
+                         <li>React & Next.js Applications</li>
+                       </ul>
+                       <ul className="ps-0">
+                         <li>
+                           <Image
+                             alt="icon"
+                             src="/assets/img/icon/signIcon.png"
+                             width="16"
+                             height="16"
+                           />
+                         </li>
+                         <li>Cloud & DevOps Services</li>
                       </ul>
                     </div>
                   </div>
@@ -134,11 +160,11 @@ export default function About() {
                         />
                       </div>
                       <div className="counter-box_counter">
-                        <div>
-                          <span className="counter-number">6,561</span>
-                          <span className="plus">+</span>
-                        </div>
-                        <span>Satisfied Clients</span>
+                                                 <div>
+                           <span className="counter-number">500</span>
+                           <span className="plus">+</span>
+                         </div>
+                         <span>Happy Customers</span>
                       </div>
                     </div>
                   </div>
@@ -153,16 +179,16 @@ export default function About() {
                   </Link>
                   <div className="fancy-box style1">
                     <div className="fancy-box_icon">
-                      <Image
-                        alt="img"
-                        src="/assets/img/about/aboutProfile1_1.png"
-                        width="56"
-                        height="56"
-                      />
-                    </div>
-                    <div className="fancy-box_content">
-                      <h4>Ronald Richards</h4>
-                      <span>Co, Founder</span>
+                                             <Image
+                         alt="img"
+                         src="/assets/img/team/TechLead.jpeg"
+                         width="56"
+                         height="56"
+                       />
+                     </div>
+                     <div className="fancy-box_content">
+                       <h4>Khuzaima Afzal</h4>
+                       <span>Founder & Tech Lead</span>
                     </div>
                   </div>
                 </div>

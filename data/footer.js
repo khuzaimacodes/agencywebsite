@@ -1,7 +1,7 @@
 export const footerLinks = [
-  { href: "/about", text: "Techbe About" },
+  { href: "/about", text: "About Us" },
   { href: "/service-1", text: "Our Services" },
-  { href: "/blog-details/1", text: "Our Blogs" },
-  { href: "/faq", text: "FAQ’S" },
+  { href: "/project", text: "Our Portfolio" },
+  { href: "/faq", text: "FAQ'S" },
   { href: "/contact", text: "Contact Us" },
 ];

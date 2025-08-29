@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
@@ -27,14 +29,38 @@ export default function ProjectDetails({ projectItem }) {
                         {projectItem.title}
                       </h3>
                       <p className="wow fadeInUp" data-wow-delay=".9s">
-                        Nulla faucibus malesuada. In placerat feugiat eros ac
-                        tempor. Integer euismod massa sapien, et consequat enim
-                        laoreet et. Nulla sit amet nisi dapibus, gravida turpis
-                        sit amet, accumsan nisl. Fusce vel semper risus. Morbi
-                        congue eros sagittis, sodales turpis venenatis, iaculis
-                        dui. Proin ac purus sed nibh dapibus neque. scelerisque
-                        sed quis ante.
+                        {projectItem.description || "Nulla faucibus malesuada. In placerat feugiat eros ac tempor. Integer euismod massa sapien, et consequat enim laoreet et. Nulla sit amet nisi dapibus, gravida turpis sit amet, accumsan nisl. Fusce vel semper risus. Morbi congue eros sagittis, sodales turpis venenatis, iaculis dui. Proin ac purus sed nibh dapibus neque. scelerisque sed quis ante."}
                       </p>
+                      
+                      {/* Live Website Button */}
+                      {projectItem.websiteUrl && (
+                        <div className="live-website-btn wow fadeInUp" data-wow-delay="1.1s" style={{ marginTop: "30px" }}>
+                          <a 
+                            href={projectItem.websiteUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="gt-btn"
+                            style={{
+                              display: "inline-flex",
+                              alignItems: "center",
+                              gap: "10px",
+                              backgroundColor: "#384bff",
+                              color: "white",
+                              padding: "15px 30px",
+                              borderRadius: "8px",
+                              textDecoration: "none",
+                              fontWeight: "600",
+                              fontSize: "16px",
+                              transition: "all 0.3s ease",
+                              boxShadow: "0 4px 15px rgba(56, 75, 255, 0.3)"
+                            }}
+
+                          >
+                            <i className="fa-solid fa-external-link-alt" />
+                            Visit Live Website
+                          </a>
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className="col-lg-4">
@@ -46,16 +72,31 @@ export default function ProjectDetails({ projectItem }) {
                       <ul>
                         <li>
                           Client:
-                          <span>Ralph Edwards</span>
+                          <span>{projectItem.client || "Ralph Edwards"}</span>
                         </li>
                         <li>
                           Category:
-                          <span>IT Management</span>
+                          <span>{projectItem.category}</span>
                         </li>
                         <li>
                           Location:
-                          <span>Landon</span>
+                          <span>{projectItem.location || "London"}</span>
                         </li>
+                        {projectItem.websiteUrl && (
+                          <li>
+                            Live Website:
+                            <span>
+                              <a 
+                                href={projectItem.websiteUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="website-link"
+                              >
+                                View Live Site <i className="fa-solid fa-external-link" />
+                              </a>
+                            </span>
+                          </li>
+                        )}
                         <li>
                           Share:
                           <span>
@@ -74,76 +115,42 @@ export default function ProjectDetails({ projectItem }) {
                 >
                   <h3>Our Challenge</h3>
                   <p>
-                    Pellentesque egestas rutrum nibh facilisis ultrices.
-                    Phasellus in magna ut orci malesuada sollicitudin. Aenean
-                    faucibus scelerisque convallis. Quisque interdum mauris id
-                    nunc molestie, ac tincidunt erat gravida. Nullam dui libero,
-                    mollis ac quam et, venenatis tincidunt quam. Proin nec
-                    volutpat ligula, id porttitor augue. Proin id volutpat
-                    massa. Vivamus tincidunt nunc justo, ac aliquam ex molestie
-                    id.
+                    {projectItem.challenge || "Pellentesque egestas rutrum nibh facilisis ultrices. Phasellus in magna ut orci malesuada sollicitudin. Aenean faucibus scelerisque convallis. Quisque interdum mauris id nunc molestie, ac tincidunt erat gravida. Nullam dui libero, mollis ac quam et, venenatis tincidunt quam. Proin nec volutpat ligula, id porttitor augue. Proin id volutpat massa. Vivamus tincidunt nunc justo, ac aliquam ex molestie id."}
                   </p>
                 </div>
-                <div className="row g-4 pt-5">
-                  <div className="col-lg-3 col-md-6">
-                    <ul className="list wow fadeInUp" data-wow-delay="1.2s">
-                      <li>
-                        <i className="fa-regular fa-circle-check" />
-                        Branding and design Identity
-                      </li>
-                      <li>
-                        <i className="fa-regular fa-circle-check" />
-                        Web site Marketing Solutions
-                      </li>
-                    </ul>
+                {projectItem.features && projectItem.features.length > 0 && (
+                  <div className="row g-4 pt-5">
+                    {[0, 1, 2].map((colIndex) => (
+                      <div key={colIndex} className="col-lg-4 col-md-6">
+                        <ul className="list wow fadeInUp" data-wow-delay={`${1.2 + colIndex * 0.2}s`}>
+                          {projectItem.features
+                            .slice(colIndex * 2, (colIndex + 1) * 2)
+                            .map((feature, index) => (
+                              <li key={index}>
+                                <i className="fa-regular fa-circle-check" />
+                                {feature}
+                              </li>
+                            ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
-                  <div className="col-lg-3 col-md-6">
-                    <ul className="list wow fadeInUp" data-wow-delay="1.4s">
-                      <li>
-                        <i className="fa-regular fa-circle-check" />
-                        Branding and design Identity
-                      </li>
-                      <li>
-                        <i className="fa-regular fa-circle-check" />
-                        Web site Marketing Solutions
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-lg-3 col-md-6">
-                    <ul className="list wow fadeInUp" data-wow-delay="1.6s">
-                      <li>
-                        <i className="fa-regular fa-circle-check" />
-                        Branding and design Identity
-                      </li>
-                      <li>
-                        <i className="fa-regular fa-circle-check" />
-                        Web site Marketing Solutions
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                )}
                 <div
                   className="details-content pt-5 wow fadeInUp"
                   data-wow-delay="1.9s"
                 >
                   <h3>The Result of Project</h3>
                   <p>
-                    Pellentesque egestas rutrum nibh facilisis ultrices.
-                    Phasellus in magna ut orci malesuada sollicitudin. Aenean
-                    faucibus scelerisque convallis. Quisque interdum mauris id
-                    nunc molestie, ac tincidunt erat gravida. Nullam dui libero,
-                    mollis ac quam et, venenatis tincidunt quam. Proin nec
-                    volutpat ligula, id porttitor augue. Proin id volutpat
-                    massa. Vivamus tincidunt nunc justo, ac aliquam ex molestie
-                    id.
+                    {projectItem.result || "Pellentesque egestas rutrum nibh facilisis ultrices. Phasellus in magna ut orci malesuada sollicitudin. Aenean faucibus scelerisque convallis. Quisque interdum mauris id nunc molestie, ac tincidunt erat gravida. Nullam dui libero, mollis ac quam et, venenatis tincidunt quam. Proin nec volutpat ligula, id porttitor augue. Proin id volutpat massa. Vivamus tincidunt nunc justo, ac aliquam ex molestie id."}
                   </p>
                 </div>
                 <div className="row g-4 pt-5">
                   <div className="col-lg-6 col-md-6">
                     <div className="thumb wow fadeInUp" data-wow-delay="2s">
                       <Image
-                        alt="img"
-                        src="/assets/img/project/projectThumb3_2.png"
+                        alt={`${projectItem.title} detail image 1`}
+                        src={projectItem.image2 || "/assets/img/project/2.png"}
                         width="570"
                         height="360"
                       />
@@ -152,39 +159,13 @@ export default function ProjectDetails({ projectItem }) {
                   <div className="col-lg-6 col-md-6">
                     <div className="thumb wow fadeInUp" data-wow-delay="2.4s">
                       <Image
-                        alt="img"
-                        src="/assets/img/project/projectThumb3_3.png"
+                        alt={`${projectItem.title} detail image 2`}
+                        src={projectItem.image3 || "/assets/img/project/3.png"}
                         width="570"
                         height="360"
                       />
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="preview-area">
-                <div className="preview-item wow fadeInUp" data-wow-delay=".9s">
-                  <Image
-                    alt="img"
-                    src="/assets/img/project/projectThumb3_4.png"
-                    width="62"
-                    height="62"
-                  />
-                  <div className="content">
-                    <h3>Preview</h3>
-                    <p>Analytic Solutions</p>
-                  </div>
-                </div>
-                <div className="preview-item wow fadeInUp" data-wow-delay="1s">
-                  <div className="content text-right">
-                    <h3>Next</h3>
-                    <p>Software Development</p>
-                  </div>
-                  <Image
-                    alt="img"
-                    src="/assets/img/project/projectThumb3_5.png"
-                    width="62"
-                    height="62"
-                  />
                 </div>
               </div>
             </div>

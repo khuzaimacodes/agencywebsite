@@ -77,8 +77,8 @@ export default function MobileNav() {
         <div className="mobile-logo">
           <Link scroll={false} href="/">
             <Image
-              alt="techo"
-              src="/assets/img/logo-dark.png"
+              alt="KZ WEBSOLUTIONS"
+              src="/assets/img/blacklogo.png"
               width="199"
               height="42"
             />

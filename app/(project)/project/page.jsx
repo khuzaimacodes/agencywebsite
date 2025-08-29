@@ -6,8 +6,8 @@ import Cta from "@/components/common/Cta";
 import Projects from "@/components/otherPages/project/Projects";
 import Link from "next/link";
 export const metadata = {
-  title: "Project || Techbe-IT Solution & Technology Service Nextjs Template",
-  description: "Techbe-IT Solution & Technology Service Nextjs Template",
+  title: "Our Projects Portfolio || KZWebSolutions",
+  description: "Explore our diverse portfolio of successful web development projects. From e-commerce platforms to healthcare websites, we bring ideas to life with cutting-edge technology.",
 };
 export default function Page() {
   return (
@@ -24,7 +24,7 @@ export default function Page() {
             <div className="container">
               <div className="page-heading">
                 <h1 className="wow fadeInUp" data-wow-delay=".3s">
-                  Project 01
+                  Our Projects
                 </h1>
                 <ul
                   className="breadcrumb-items wow fadeInUp"
@@ -39,7 +39,7 @@ export default function Page() {
                   <li>
                     <i className="fas fa-chevrons-right" />
                   </li>
-                  <li>Project 01</li>
+                  <li>Project</li>
                 </ul>
               </div>
             </div>

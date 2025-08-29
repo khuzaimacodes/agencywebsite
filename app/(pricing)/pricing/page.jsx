@@ -6,8 +6,8 @@ import Cta from "@/components/common/Cta";
 import Pricing from "@/components/common/Pricing";
 import Link from "next/link";
 export const metadata = {
-  title: "Pricing || Techbe-IT Solution & Technology Service Nextjs Template",
-  description: "Techbe-IT Solution & Technology Service Nextjs Template",
+  title: "Pricing || KZWebSolutions",
+  description: "KZWebSolutions - Professional Web Development & IT Solutions",
 };
 export default function Page() {
   return (

@@ -7,9 +7,8 @@ import TeamDetails from "@/components/otherPages/team/TeamDetails";
 import Link from "next/link";
 import { allTeammembers } from "@/data/team";
 export const metadata = {
-  title:
-    "Team Details || Techbe-IT Solution & Technology Service Nextjs Template",
-  description: "Techbe-IT Solution & Technology Service Nextjs Template",
+  title: "Team Details || KZWebSolutions",
+  description: "KZWebSolutions - Professional Web Development & IT Solutions",
 };
 export default function Page({ params }) {
   const teamMember =

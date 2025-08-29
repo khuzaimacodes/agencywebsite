@@ -6,9 +6,8 @@ import Cta from "@/components/common/Cta";
 import NotFound from "@/components/otherPages/NotFound";
 import Link from "next/link";
 export const metadata = {
-  title:
-    "Page Not Found || Techbe-IT Solution & Technology Service Nextjs Template",
-  description: "Techbe-IT Solution & Technology Service Nextjs Template",
+  title: "Page Not Found - KZWebSolutions | Custom Software Development & Web Applications",
+  description: "KZWebSolutions - Professional software development company specializing in React, Next.js, and modern web technologies. We create scalable, SEO-optimized applications for businesses worldwide.",
 };
 export default function Page() {
   return (

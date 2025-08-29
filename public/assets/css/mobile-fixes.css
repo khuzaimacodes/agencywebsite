@@ -1,0 +1,529 @@
+/* Mobile Responsiveness Fixes for Hero Section */
+
+/* Small screens (mobile) */
+@media (max-width: 767px) {
+  .hero-2 .hero-style2 {
+    padding: 60px 0 80px 0 !important;
+  }
+  
+  .hero-2 .hero-style2 .hero-sub-title {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .hero-2 .hero-style2 .hero-title {
+    margin-bottom: 15px !important;
+  }
+  
+  .hero-2 .hero-style2 .hero-title .title1,
+  .hero-2 .hero-style2 .hero-title .title2 {
+    font-size: 24px !important;
+    line-height: 28px !important;
+    margin-bottom: 3px !important;
+  }
+  
+  .hero-2 .swiper-slide {
+    height: 400px !important;
+  }
+  
+  .hero-2 .gt-btn {
+    font-size: 12px !important;
+    padding: 10px 18px !important;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 575px) {
+  .hero-2 .hero-style2 {
+    padding: 50px 0 70px 0 !important;
+  }
+  
+  .hero-2 .hero-style2 .hero-title .title1,
+  .hero-2 .hero-style2 .hero-title .title2 {
+    font-size: 20px !important;
+    line-height: 24px !important;
+  }
+  
+  .hero-2 .swiper-slide {
+    height: 350px !important;
+  }
+  
+  .hero-2 .hero-style2 .hero-sub-title {
+    font-size: 10px !important;
+    line-height: 14px !important;
+  }
+  
+  .hero-2 .gt-btn {
+    font-size: 11px !important;
+    padding: 8px 16px !important;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-2 .hero-style2 .hero-title .title1,
+  .hero-2 .hero-style2 .hero-title .title2 {
+    font-size: 36px !important;
+    line-height: 42px !important;
+  }
+  
+  .hero-2 .hero-style2 {
+    padding: 150px 0 200px 0 !important;
+  }
+  
+  .hero-2 .swiper-slide {
+    height: 600px !important;
+  }
+}
+
+/* Hide some decorative elements on mobile */
+@media (max-width: 767px) {
+  .hero-2 .shape2_2,
+  .hero-2 .shape2_3,
+  .hero-2 .shape2_4,
+  .hero-2 .shape2_5 {
+    display: none !important;
+  }
+  
+  .hero-2 .slider-arrow {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .hero-2 .scroll-down {
+    display: none !important;
+  }
+}
+
+/* General mobile optimizations */
+@media (max-width: 767px) {
+  /* Reduce padding and margins */
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  /* Make headings much smaller for mobile */
+  h1, .h1 {
+    font-size: 20px !important;
+    line-height: 26px !important;
+  }
+  
+  h2, .h2 {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+  
+  h3, .h3 {
+    font-size: 16px !important;
+    line-height: 22px !important;
+  }
+  
+  h4, .h4 {
+    font-size: 15px !important;
+    line-height: 20px !important;
+  }
+  
+  h5, .h5 {
+    font-size: 14px !important;
+    line-height: 18px !important;
+  }
+  
+  h6, .h6 {
+    font-size: 13px !important;
+    line-height: 17px !important;
+  }
+  
+  /* Optimize buttons for mobile */
+  .gt-btn {
+    font-size: 12px !important;
+    padding: 8px 16px !important;
+    min-height: 40px !important; /* Touch-friendly */
+  }
+  
+  /* Optimize spacing */
+  .space-top {
+    padding-top: 30px !important;
+  }
+  
+  .space-bottom {
+    padding-bottom: 30px !important;
+  }
+  
+  .pb-425 {
+    padding-bottom: 40px !important;
+  }
+  
+  .mt-55 {
+    margin-top: 25px !important;
+  }
+  
+  .mb-30 {
+    margin-bottom: 15px !important;
+  }
+  
+  .mb-50 {
+    margin-bottom: 25px !important;
+  }
+  
+  /* Make paragraph text smaller */
+  p {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+  
+  /* Make list text smaller */
+  li {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+}
+
+/* Extra small screen optimizations */
+@media (max-width: 575px) {
+  h1, .h1 {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+  
+  h2, .h2 {
+    font-size: 16px !important;
+    line-height: 22px !important;
+  }
+  
+  h3, .h3 {
+    font-size: 15px !important;
+    line-height: 20px !important;
+  }
+  
+  .gt-btn {
+    font-size: 11px !important;
+    padding: 6px 14px !important;
+  }
+  
+  .space-top {
+    padding-top: 25px !important;
+  }
+  
+  .space-bottom {
+    padding-bottom: 25px !important;
+  }
+  
+  .mb-50 {
+    margin-bottom: 20px !important;
+  }
+  
+  p {
+    font-size: 13px !important;
+    line-height: 18px !important;
+  }
+  
+  li {
+    font-size: 13px !important;
+    line-height: 18px !important;
+  }
+}
+
+/* Additional component-specific mobile fixes */
+@media (max-width: 767px) {
+  /* Testimonial cards - make text much smaller */
+  .testimonial-card .testimonial-content p,
+  .testimonial-card .text {
+    font-size: 12px !important;
+    line-height: 16px !important;
+  }
+  
+  .testimonial-card .testimonial-author h4,
+  .testimonial-card .title {
+    font-size: 14px !important;
+    line-height: 18px !important;
+  }
+  
+  .testimonial-card .testimonial-author span,
+  .testimonial-card .designation {
+    font-size: 11px !important;
+    line-height: 15px !important;
+  }
+  
+  /* Testimonial section titles */
+  .testimonial-area .subtitle {
+    font-size: 12px !important;
+    line-height: 16px !important;
+  }
+  
+  .testimonial-area .title {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+  
+  /* Team cards */
+  .team-card .team-content h3 {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+  
+  .team-card .team-content p {
+    font-size: 13px !important;
+    line-height: 18px !important;
+  }
+  
+  /* Service cards */
+  .service-card .service-content_title h3 {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+  
+  .service-card .service-content_text p {
+    font-size: 13px !important;
+    line-height: 18px !important;
+  }
+  
+  /* Blog cards */
+  .blog-card .blog-content h3 {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+  
+  .blog-card .blog-content p {
+    font-size: 13px !important;
+    line-height: 18px !important;
+  }
+  
+  /* CTA sections */
+  .cta-area .cta-content h2 {
+    font-size: 20px !important;
+    line-height: 26px !important;
+  }
+  
+  .cta-area .cta-content p {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+  
+  /* About sections */
+  .about-content h2 {
+    font-size: 20px !important;
+    line-height: 26px !important;
+  }
+  
+  .about-content p {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+  
+  /* Contact sections */
+  .contact-info h3 {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+  
+  .contact-info p {
+    font-size: 13px !important;
+    line-height: 18px !important;
+  }
+}
+
+/* Extra small screen component fixes */
+@media (max-width: 575px) {
+  .testimonial-card .testimonial-content p,
+  .testimonial-card .text {
+    font-size: 11px !important;
+    line-height: 15px !important;
+  }
+  
+  .testimonial-card .title {
+    font-size: 13px !important;
+    line-height: 17px !important;
+  }
+  
+  .testimonial-card .designation {
+    font-size: 10px !important;
+    line-height: 14px !important;
+  }
+  
+  .testimonial-area .subtitle {
+    font-size: 11px !important;
+    line-height: 15px !important;
+  }
+  
+  .testimonial-area .title {
+    font-size: 16px !important;
+    line-height: 22px !important;
+  }
+  
+  .team-card .team-content h3 {
+    font-size: 15px !important;
+    line-height: 19px !important;
+  }
+  
+  .service-card .service-content_title h3 {
+    font-size: 15px !important;
+    line-height: 19px !important;
+  }
+  
+  .blog-card .blog-content h3 {
+    font-size: 15px !important;
+    line-height: 19px !important;
+  }
+  
+  .cta-area .cta-content h2 {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .project-box-items:hover {
+    transform: none !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+  }
+  
+  .project-box-items:active {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  .project-box-items:active .project-content {
+    transform: translateY(0) !important;
+  }
+}
+
+/* Team Section Mobile Centering Fixes */
+@media (max-width: 768px) {
+  /* Team area mobile centering */
+  .team-area {
+    text-align: center !important;
+  }
+  
+  .team-wrap {
+    padding: 40px 20px !important;
+  }
+  
+  /* Team title centering */
+  .team-area .title-area {
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
+  
+  .team-area .subtitle {
+    text-align: center !important;
+    justify-content: center !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+  
+  .team-area .title {
+    text-align: center !important;
+    margin: 0 auto 30px auto !important;
+  }
+  
+  /* Team slider centering */
+  .team-area .slider-area {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  
+  .team-area .team-slider {
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  
+  /* Team card centering */
+  .team-area .team-card {
+    margin: 0 auto !important;
+    text-align: center !important;
+    max-width: 280px !important;
+  }
+  
+  .team-area .team-thumb {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  
+  .team-area .team-content {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  
+  .team-area .team-content h3 {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  
+  .team-area .team-content p {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Swiper slide centering */
+  .team-area .swiper-slide {
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  /* Team card spacing */
+  .team-area .team-card.style2 {
+    margin: 0 auto 20px auto !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+  }
+  
+  /* Team thumb image centering */
+  .team-area .team-thumb img {
+    margin: 0 auto !important;
+    display: block !important;
+    border-radius: 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small mobile team centering */
+  .team-area .team-wrap {
+    padding: 30px 15px !important;
+  }
+  
+  .team-area .title {
+    font-size: 20px !important;
+    line-height: 26px !important;
+    margin: 0 auto 25px auto !important;
+  }
+  
+  .team-area .subtitle {
+    font-size: 12px !important;
+    gap: 8px !important;
+  }
+  
+  .team-area .team-card {
+    max-width: 260px !important;
+    margin: 0 auto 15px auto !important;
+  }
+  
+  .team-area .team-content {
+    padding: 15px !important;
+  }
+  
+  .team-area .team-content h3 {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    margin: 0 auto 8px auto !important;
+  }
+  
+  .team-area .team-content p {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Team thumb sizing for small screens */
+  .team-area .team-thumb img {
+    width: 200px !important;
+    height: 200px !important;
+    object-fit: cover !important;
+  }
+}

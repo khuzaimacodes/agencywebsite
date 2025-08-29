@@ -93,15 +93,7 @@ export default function Testimonials() {
                       <SwiperSlide className="swiper-slide" key={index}>
                         <div className="testimonial-card style2">
                           <div className="profile-box">
-                            <div className="testi-thumb">
-                              <Image
-                                src={testimonial.imageSrc}
-                                width={100}
-                                height={100}
-                                alt="thumb"
-                              />
-                            </div>
-                            <div className="testi-content">
+                            <div className="testi-content" style={{ marginLeft: '0', paddingLeft: '0' }}>
                               <h3 className="title">{testimonial.name}</h3>
                               <div className="designation">
                                 {testimonial.designation}

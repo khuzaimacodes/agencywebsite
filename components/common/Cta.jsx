@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Cta() {
+export default function Cta({ spaced = false, className = "" }) {
   return (
     <section
-      className="cta-area mt-n150 mb-n116 wow fadeInUp"
+      className={`cta-area ${spaced ? "space-top space-bottom" : "cta-overlap"} wow fadeInUp ${className}`}
       data-wow-delay=".6s"
     >
       <div className="container">
@@ -37,7 +37,7 @@ export default function Cta() {
           <div className="cta-thumb d-none d-xl-block">
             <Image
               alt="thumb"
-              src="/assets/img/cta/ctaThumb.png"
+              src="/assets/img/cta/ctathumb1.png"
               width="393"
               height="357"
             />
@@ -46,7 +46,7 @@ export default function Cta() {
             className="cta-title text-white wow fadeInUp"
             data-wow-delay=".3s"
           >
-            Stay Connected With Cutting Edge IT
+            Stay Connected With Modern Software Solutions
           </h3>
           <div className="btn-wrapper">
             <Link

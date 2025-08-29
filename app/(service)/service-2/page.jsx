@@ -10,8 +10,8 @@ import Skills from "@/components/homes/home-2/Skills";
 import Services2 from "@/components/otherPages/service/Services2";
 import Link from "next/link";
 export const metadata = {
-  title: "Service 2 || Techbe-IT Solution & Technology Service Nextjs Template",
-  description: "Techbe-IT Solution & Technology Service Nextjs Template",
+  title: "Service 2 || KZWebSolutions",
+  description: "KZWebSolutions - Professional Web Development & IT Solutions",
 };
 export default function Page() {
   return (

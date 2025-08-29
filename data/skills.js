@@ -1,7 +1,7 @@
 export const progressData = [
   {
-    title: "Startup Consultancy",
-    percentage: "86%",
+    title: "Web Development",
+    percentage: "95%",
     delay: ".9s",
   },
   {

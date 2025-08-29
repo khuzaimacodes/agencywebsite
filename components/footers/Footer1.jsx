@@ -76,23 +76,26 @@ export default function Footer1() {
                     <div className="about-logo">
                       <Link scroll={false} href={`/`}>
                         <Image
-                          src="/assets/img/logo-white.png"
-                          width={199}
+                          src="/assets/img/logo.png"
+                          width={249}
                           height={42}
-                          alt="Realar"
+                          alt="KZ WEBSOLUTIONS"
                         />
                       </Link>
                     </div>
                     <p className="about-text">
-                      TechBe IT is a dynamic and innovative technology company
-                      dedicated to solutions.
+                      Professional software development company specializing in React, Next.js, and modern web technologies. We create innovative digital solutions for businesses worldwide.
                     </p>
-                    <div className="gt-social style2">
-                      {socialLinks2.map((link, index) => (
-                        <a href={link.href} key={index}>
-                          <i className={link.iconClass} />
-                        </a>
-                      ))}
+                    <div className="gt-social">
+                      <a href="https://www.facebook.com/share/14EanMPiFdT/" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-facebook-f" />
+                      </a>
+                      <a href="https://www.instagram.com/khuzaimacreates/" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-instagram" />
+                      </a>
+                      <a href="https://www.linkedin.com/in/khuzaima-afzal-0a4a95279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+                        <i className="fa-brands fa-linkedin-in" />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -117,10 +120,11 @@ export default function Footer1() {
                   </div>
                 </div>
               </div>
-              <div className="col-xl-5 col-md-6 col-12">
+                              
+                   <div className="col-xl-3 col-md-6 col-12">
                 <div
                   className="widget widget_nav_menu footer-widget wow fadeInUp"
-                  data-wow-delay="1.3s"
+                  data-wow-delay="1.6s"
                 >
                   <h3 className="widget_title">Contact Us</h3>
                   <div className="checklist">
@@ -128,13 +132,13 @@ export default function Footer1() {
                       <li className="text-white">
                         <i className="fa-thin fa-envelope" />
                       </li>
-                      <li className="text-white">info@example.com</li>
+                      <li className="text-white">khuzaima@kzwebsolutions.com</li>
                     </ul>
                     <ul className="ps-0">
                       <li className="text-white">
                         <i className="fa-light fa-phone-volume" />
                       </li>
-                      <li className="text-white">+208-6666-0112</li>
+                      <li className="text-white">+44 7575 842908</li>
                     </ul>
                     <form
                       ref={form}
@@ -162,7 +166,7 @@ export default function Footer1() {
                         <Link
                           scroll={false}
                           className="text-underline"
-                          href={`/about`}
+                          href={`/privacy`}
                         >
                           Privacy Policy.
                         </Link>
@@ -181,18 +185,18 @@ export default function Footer1() {
           <div className="copyright-layout">
             <div className="layout-text wow fadeInUp" data-wow-delay=".3s">
               <p className="copyright">
-                <i className="fal fa-copyright" /> All Copyright 2024 by
+                <i className="fal fa-copyright" /> All Copyright 2024  by
                 <Link scroll={false} href={`/`}>
-                  Techbe
+                  KHUZAIMA DIGISPHERE LTD
                 </Link>
               </p>
             </div>
             <div className="layout-link wow fadeInUp" data-wow-delay=".6s">
               <div className="link-wrapper">
-                <Link scroll={false} href={`/home-3`}>
+                <Link scroll={false} href={`/terms`}>
                   Terms &amp; Condition{" "}
                 </Link>
-                <Link scroll={false} href={`/home-3`}>
+                <Link scroll={false} href={`/privacy`}>
                   Privacy Policy
                 </Link>
               </div>

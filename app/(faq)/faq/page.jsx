@@ -7,8 +7,8 @@ import Cta from "@/components/common/Cta";
 import Link from "next/link";
 import Faq from "@/components/otherPages/faq/Faq";
 export const metadata = {
-  title: "Faq || Techbe-IT Solution & Technology Service Nextjs Template",
-  description: "Techbe-IT Solution & Technology Service Nextjs Template",
+  title: "FAQ - KZWebSolutions | Custom Software Development & Web Applications",
+  description: "KZWebSolutions - Professional software development company specializing in React, Next.js, and modern web technologies. We create scalable, SEO-optimized applications for businesses worldwide.",
 };
 export default function Page() {
   return (

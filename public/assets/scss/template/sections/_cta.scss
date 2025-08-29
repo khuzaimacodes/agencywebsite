@@ -139,3 +139,35 @@
     }
   }
 }
+
+/*=================================
+    CTA Overlap with Footer
+==================================*/
+.cta-overlap {
+  position: relative;
+  z-index: 10;
+  margin-bottom: -120px;
+  padding-bottom: 120px;
+
+  .cta-wrap {
+    transform: translateY(60px);
+  }
+
+  @include lg {
+    margin-bottom: -80px;
+    padding-bottom: 80px;
+    
+    .cta-wrap {
+      transform: translateY(40px);
+    }
+  }
+
+  @include md {
+    margin-bottom: -60px;
+    padding-bottom: 60px;
+    
+    .cta-wrap {
+      transform: translateY(30px);
+    }
+  }
+}

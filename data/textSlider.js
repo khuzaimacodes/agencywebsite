@@ -1,23 +1,38 @@
 export const textSlides = [
   {
-    text: "Cyber Security",
+    text: "No Code Solutions",
     icon: "/assets/img/icon/starIcon3.png",
     customClass: "text-custom-storke",
   },
   {
-    text: "IT Solution",
+    text: "Website Development",
     icon: "/assets/img/icon/starIcon3.png",
     customClass: "",
   },
   {
-    text: "Technology",
+    text: "UI/UX Designing",
     icon: "/assets/img/icon/starIcon3.png",
     customClass: "text-custom-storke",
   },
   {
-    text: "Data Security",
+    text: "AI Agents",
     icon: "/assets/img/icon/starIcon3.png",
     customClass: "",
+  },
+  {
+    text: "Mobile Development",
+    icon: "/assets/img/icon/starIcon3.png",
+    customClass: "text-custom-storke",
+  },
+  {
+    text: "Cloud Solutions",
+    icon: "/assets/img/icon/starIcon3.png",
+    customClass: "",
+  },
+  {
+    text: "Digital Marketing",
+    icon: "/assets/img/icon/starIcon3.png",
+    customClass: "text-custom-storke",
   },
   // Add more text slides here if needed
 ];

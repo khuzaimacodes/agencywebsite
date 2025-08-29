@@ -70,15 +70,14 @@ export default function Footer2() {
                   <div className="gt-widget-about">
                     <div className="about-logo">
                       <Link scroll={false} href={`/`}>
-                        <Image   width={199}
+                        <Image   
+                          width={199}
                           height={42}
-                          alt="Realar"    src="/assets/img/logo-white.png" />
+                          alt="Realar"    src="/assets/img/logo.png" />
                       </Link>
                     </div>
                     <p className="about-text">
-                      {" "}
-                      TechBe IT is a dynamic and innovative technology company
-                      dedicated to solutions.
+                      Professional software development company specializing in React, Next.js, and modern web technologies. We create innovative digital solutions for businesses worldwide.
                     </p>
                     <div className="gt-social style2">
                       {socialLinks2.map((link, index) => (
@@ -152,56 +151,59 @@ export default function Footer2() {
                 </div>
               </div>
               <div className="col-xl-3 col-md-6 col-12">
-                <div className="widget widget_nav_menu footer-widget">
-                  <h3 className="widget_title">Contact Us</h3>
-                  <div className="checklist">
-                    <ul className="ps-0">
-                      <li className="text-white">
-                        <i className="fa-thin fa-envelope" />
-                      </li>
-                      <li className="text-white">info@example.com</li>
-                    </ul>
-                    <ul className="ps-0">
-                      <li className="text-white">
-                        <i className="fa-light fa-phone-volume" />
-                      </li>
-                      <li className="text-white">+208-6666-0112</li>
-                    </ul>
-                    <form
-                      ref={form}
-                      onSubmit={sandMail}
-                      className="email-input-container"
-                    >
-                      <input
-                        type="email"
-                        id="email"
-                        placeholder="Your email address"
-                        required
-                      />
-                      <button type="submit" id="submitButton" disabled="">
-                        <i className="fa-regular fa-arrow-right-long" />
-                      </button>
-                    </form>
-                    <form id="termsForm">
-                      <label className="custom-checkbox">
-                        <input
-                          type="checkbox"
-                          name="agree"
-                          id="agreeCheckbox"
-                        />
-                        <span className="checkmark" />I agree to the{" "}
-                        <Link
-                          scroll={false}
-                          className="text-underline"
-                          href={`/about`}
-                        >
-                          Privacy Policy.
-                        </Link>
-                      </label>
-                      <br />
-                    </form>
+                <div className="widget footer-widget">
+                  <h3 className="widget_title">Contact Info</h3>
+                  <div className="gt-widget-contact">
+                    <div className="contact-item">
+                      <div className="icon">
+                        <i className="fas fa-map-marker-alt" />
+                      </div>
+                      <div className="content">
+                        <p>124 City Road, London, United Kingdom, EC1V 2NX</p>
+                      </div>
+                    </div>
+                    <div className="contact-item">
+                      <div className="icon">
+                        <i className="fas fa-phone" />
+                      </div>
+                      <div className="content">
+                        <p>+44 7575 842908</p>
+                      </div>
+                    </div>
+                    <div className="contact-item">
+                      <div className="icon">
+                        <i className="fas fa-envelope" />
+                      </div>
+                      <div className="content">
+                        <p>khuzaima@kzwebsoulutions.com</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                
+                {/* Custom CSS to force white color for contact info */}
+                <style jsx>{`
+                  .gt-widget-contact .contact-item .content p {
+                    color: white !important;
+                    font-weight: 500 !important;
+                  }
+                  
+                  .gt-widget-contact .contact-item .icon {
+                    color: white !important;
+                    border: 1px solid white !important;
+                  }
+                  
+                  .gt-widget-contact .contact-item .icon i {
+                    color: white !important;
+                  }
+                  
+                  /* Force override any existing styles */
+                  footer .gt-widget-contact .contact-item .content p,
+                  footer .gt-widget-contact .contact-item .icon,
+                  footer .gt-widget-contact .contact-item .icon i {
+                    color: white !important;
+                  }
+                `}</style>
               </div>
             </div>
           </div>
@@ -214,16 +216,16 @@ export default function Footer2() {
               <p className="copyright">
                 <i className="fal fa-copyright" /> All Copyright 2024 by{" "}
                 <Link scroll={false} href={`/`}>
-                  Techbe
+                  KHUZAIMA DIGISPHERE LTD
                 </Link>
               </p>
             </div>
             <div className="layout-link">
               <div className="link-wrapper">
-                <Link scroll={false} href={`/home-3`}>
+                <Link scroll={false} href={`/terms`}>
                   Terms &amp; Condition{" "}
                 </Link>
-                <Link scroll={false} href={`/home-3`}>
+                <Link scroll={false} href={`/privacy`}>
                   Privacy Policy
                 </Link>
               </div>

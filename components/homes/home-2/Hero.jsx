@@ -42,7 +42,7 @@ export default function Hero() {
                   />
                 </div>
                 <div
-                  className="shape2_2"
+                  className="shape2_2 d-none d-lg-block"
                   data-ani="slideindown"
                   data-ani-delay="0.6s"
                 >
@@ -54,7 +54,7 @@ export default function Hero() {
                   />
                 </div>
                 <div
-                  className="shape2_3"
+                  className="shape2_3 d-none d-lg-block"
                   data-ani="slideindown"
                   data-ani-delay="0.3s"
                 >
@@ -66,7 +66,7 @@ export default function Hero() {
                   />
                 </div>
                 <div
-                  className="shape2_4"
+                  className="shape2_4 d-none d-lg-block"
                   data-ani="slideindown"
                   data-ani-delay="0.9s"
                 >
@@ -78,7 +78,7 @@ export default function Hero() {
                   />
                 </div>
                 <div
-                  className="shape2_5"
+                  className="shape2_5 d-none d-lg-block"
                   data-ani="slideindown"
                   data-ani-delay="0.6s"
                 >
@@ -110,7 +110,7 @@ export default function Hero() {
                           data-ani="slideindown"
                           data-ani-delay="0.2s"
                         >
-                          <span className="me-1">
+                          <span className="me-1 d-none d-sm-inline">
                             <Image
                               alt="icon"
                               src="/assets/img/icon/titleIconWhite.png"
@@ -118,8 +118,9 @@ export default function Hero() {
                               height="12"
                             />
                           </span>
-                          BEST IT SOLUTION PROVIDER
-                          <span className="ms-1">
+                          <span className="d-inline d-sm-none">PREMIUM</span>
+                          <span className="d-none d-sm-inline">PREMIUM SOFTWARE DEVELOPMENT COMPANY</span>
+                          <span className="ms-1 d-none d-sm-inline">
                             <Image
                               alt="icon"
                               src="/assets/img/icon/titleIconWhite.png"
@@ -162,7 +163,7 @@ export default function Hero() {
           ))}
         </div>
       </Swiper>
-      <button className="slider-arrow style2 snbp4">
+      <button className="slider-arrow style2 snbp4 d-none d-md-block">
         <Image
           alt="img"
           src="/assets/img/icon/arrowLeft.png"
@@ -170,7 +171,7 @@ export default function Hero() {
           height="20"
         />
       </button>
-      <button className="slider-arrow style2 slider-next snbn4 ">
+      <button className="slider-arrow style2 slider-next snbn4 d-none d-md-block">
         <Image
           alt="img"
           src="/assets/img/icon/arrowRight.png"
@@ -178,7 +179,7 @@ export default function Hero() {
           height="20"
         />
       </button>
-      <div className="scroll-down">
+      <div className="scroll-down d-none d-md-block">
         <a href="#service-area" className="hero-scroll-wrap">
           <i className="fal fa-long-arrow-left" />
           Scroll

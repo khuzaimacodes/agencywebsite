@@ -11,7 +11,7 @@ export default function NotFound() {
             <div className="error-items">
               <div className="error-image">
                 <Image
-                  src="/assets/img/bg/error.png"
+                  src="/assets/img/bg/error.webp"
                   width={896}
                   height={539}
                   alt="img"

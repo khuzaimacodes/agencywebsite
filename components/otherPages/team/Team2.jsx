@@ -22,28 +22,8 @@ export default function Team2() {
                       height={241}
                       alt="team-img"
                     />
-                    <div className="social-profile">
-                      <span className="plus-btn">
-                        <i className="fas fa-share-alt" />
-                      </span>
-                      <ul>
-                        {Object.entries(member.socialLinks).map(
-                          ([platform, url]) => (
-                            <li key={platform}>
-                              <a href={url}>
-                                <i
-                                  className={`fab fa-${
-                                    platform === "facebook"
-                                      ? "facebook-f"
-                                      : platform
-                                  }`}
-                                />
-                              </a>
-                            </li>
-                          )
-                        )}
-                      </ul>
-                    </div>
+                  
+                           
                   </div>
                   <div className="team-content text-center">
                     <h3>
@@ -51,7 +31,7 @@ export default function Team2() {
                         {member.name}
                       </Link>
                     </h3>
-                    <p>{member.position}</p>
+                    <p>{member.position || member.role}</p>
                   </div>
                 </div>
               </div>

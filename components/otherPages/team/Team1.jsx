@@ -29,7 +29,7 @@ export default function Team1() {
                       {member.name}
                     </Link>
                   </h3>
-                  <div className="text">{member.position}</div>
+                  <div className="text">{member.position || member.role}</div>
                 </div>
                 <div className="bg">
                   <Image src={member.bgSrc} width={370} height={343} alt="bg" />
@@ -56,17 +56,7 @@ export default function Team1() {
                     alt="thumb"
                   />
                 </div>
-                <div className="profile-box">
-                  <h3 className="title">
-                    <Link scroll={false} href={`/team-details/${member.id}`}>
-                      {member.name}
-                    </Link>
-                  </h3>
-                  <div className="text">{member.position}</div>
-                </div>
-                <div className="bg">
-                  <Image src={member.bgSrc} width={370} height={343} alt="bg" />
-                </div>
+               
               </div>
             ))}
           </div>

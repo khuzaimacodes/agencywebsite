@@ -46,7 +46,7 @@ export default function Skills() {
                       height="12"
                     />
                   </span>{' '}
-                  Our It Skill{' '}
+                  Our Development Skills{' '}
                   <span>
                     <Image
                       alt="icon"
@@ -60,21 +60,16 @@ export default function Skills() {
                   className="title text-start wow fadeInUp"
                   data-wow-delay=".6s"
                 >
-                  We Prominent Truly Trusted IT Business Solutions
+                  We Build Scalable Software Solutions with Modern Technologies
                 </h2>
                 <p className="text wow fadeInUp" data-wow-delay=".9s">
-                  It is a long established fact that a reader will be distracted
-                  the readable content of a page when looking at layout the
-                  point.
+                  Our team of expert developers specializes in React, Next.js, Node.js, and cutting-edge web technologies. We create high-performance, scalable applications that drive business growth and deliver exceptional user experiences.
                 </p>
               </div>
-              <div
-                className="fancy-box-wrapper wow fadeInUp"
-                data-wow-delay=".6s"
-              >
+              <div className="fancy-box-wrapper wow fadeInUp" data-wow-delay=".6s">
                 <div className="fancy-box">
                   <div className="checklist mt-0 mb-0">
-                    <ul className="ps-0 ms-0">
+                    <ul className="ps-0">
                       <li>
                         <Image
                           alt="icon"
@@ -83,9 +78,9 @@ export default function Skills() {
                           height="16"
                         />
                       </li>
-                      <li>Branding And Design Identity</li>
+                      <li>Branding & Design Identity</li>
                     </ul>
-                    <ul className="ps-0 ms-0">
+                    <ul className="ps-0">
                       <li>
                         <Image
                           alt="icon"
@@ -94,34 +89,49 @@ export default function Skills() {
                           height="16"
                         />
                       </li>
-                      <li>Web site Marketing Solutions</li>
+                      <li>Website Marketing Solutions</li>
+                    </ul>
+                    <ul className="ps-0">
+                      <li>
+                        <Image
+                          alt="icon"
+                          src="/assets/img/icon/signIcon.png"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                      <li>24/7 System Monitoring</li>
+                    </ul>
+                    <ul className="ps-0">
+                      <li>
+                        <Image
+                          alt="icon"
+                          src="/assets/img/icon/signIcon.png"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                      <li>Smart AI Solutions</li>
                     </ul>
                   </div>
                 </div>
-                <div className="fancy-box">
-                  <div className="checklist mt-0 mb-0">
-                    <ul className="ps-0 ms-0">
-                      <li>
-                        <Image
-                          alt="icon"
-                          src="/assets/img/icon/signIcon.png"
-                          width="16"
-                          height="16"
-                        />
-                      </li>
-                      <li>24/7 system Monitoring</li>
-                    </ul>
-                    <ul className="ps-0 ms-0">
-                      <li>
-                        <Image
-                          alt="icon"
-                          src="/assets/img/icon/signIcon.png"
-                          width="16"
-                          height="16"
-                        />
-                      </li>
-                      <li>Unlimited Download Data</li>
-                    </ul>
+                <div className="fancy-box d-flex justify-content-start justify-content-md-end">
+                  <div className="counter-box style1">
+                    <div className="counter-box_icon">
+                      <Image
+                        alt="icon"
+                        src="/assets/img/icon/aboutIcon1_1.png"
+                        width="52"
+                        height="52"
+                      />
+                    </div>
+                    <div className="counter-box_counter">
+                      <div>
+                        <span className="counter-number">95</span>
+                        <span className="plus">%</span>
+                      </div>
+                      <span>AI Solutions</span>
+                    </div>
                   </div>
                 </div>
               </div>

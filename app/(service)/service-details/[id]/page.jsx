@@ -7,9 +7,8 @@ import ServiceDetails from "@/components/otherPages/service/ServiceDetails";
 import Link from "next/link";
 import { allService } from "@/data/services";
 export const metadata = {
-  title:
-    "Service Details|| Techbe-IT Solution & Technology Service Nextjs Template",
-  description: "Techbe-IT Solution & Technology Service Nextjs Template",
+  title: "Service Details || KZWebSolutions",
+  description: "KZWebSolutions - Professional Web Development & IT Solutions",
 };
 export default function Page({ params }) {
   const serviceItem =

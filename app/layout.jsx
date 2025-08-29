@@ -1,6 +1,8 @@
+
 "use client";
 import MobileNav from "@/components/headers/MobileNav";
 import "../public/assets/scss/styles.scss";
+import "../public/assets/css/mobile-fixes.css";
 import { useEffect } from "react";
 import SiteMenu from "@/components/headers/SiteMenu";
 import ScrollTop from "@/components/common/ScrollTop";

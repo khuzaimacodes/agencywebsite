@@ -38,8 +38,8 @@ export default function AboutCta() {
               className="title text-center text-white mb-50 wow fadeInUp"
               data-wow-delay=".6s"
             >
-              Talk To About An IT Solution for Your
-              <span className=""> Technology </span>
+              Talk To Us About Custom Software Solutions for Your
+              <span className=""> Business </span>
             </h2>
           </div>
           <div

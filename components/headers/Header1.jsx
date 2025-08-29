@@ -18,10 +18,10 @@ export default function Header1() {
                 <div className="header-logo">
                   <Link scroll={false} href={`/`}>
                     <Image
-                      src="/assets/img/logo-white.png"
+                      src="/assets/img/logo.png"
                       width={199}
                       height={42}
-                      alt="techo"
+                      alt="KZ WEBSOLUTIONS"
                     />
                   </Link>
                 </div>
